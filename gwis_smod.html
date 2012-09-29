@@ -1,0 +1,174 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title></title>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+		<script type="text/javascript">
+		//jQuery.noConflict();
+		$(document).ready(function(){
+			//$("#gwis_s_mod #gwis_s_mod_label").css("border-radius","10px 0 0 10px");
+			
+			$(".gwis_s_mod_label").mouseenter(function(){
+				$(this).parent().stop(true,false).animate({
+					right: '0'
+				}).css("z-index","100");
+			});
+			$("#gwis_s_modFB,#gwis_s_modTW").mouseleave(function(){
+				$(this).delay(500).animate({
+					right: '-320'
+				}, function(){
+					$(this).css("z-index","0");
+				});
+			});
+			$("#gwis_s_modGP").mouseleave(function(){
+				$(this).delay(500).animate({
+					right: '-70'
+				}, function(){
+					$(this).css("z-index","0");
+				});
+			});
+			/*
+			jQuery("#gwis_s_modFB").hover(function(){
+			jQuery(this).stop(true,false).animate({right: 0}, 500); },function(){ jQuery("#gwis_s_modFB").stop(true,false).animate({right: -320}, 500); });
+			jQuery("#gwis_s_modTW").hover(function(){
+			jQuery(this).stop(true,false).animate({right: 0}, 500); },function(){ jQuery("#gwis_s_modTW").stop(true,false).animate({right: -320}, 500); });
+			jQuery("#gwis_s_modGP").hover(function(){
+			jQuery(this).stop(true,false).animate({right: 0}, 500); },function(){ jQuery("#gwis_s_modGP").stop(true,false).delay(1000).animate({right: -100}, 500); });*/
+		});
+		</script>
+		<style type="text/css">
+			#gwis_s_modFB,#gwis_s_modTW,#gwis_s_modGP{
+				position: fixed;
+				top: 25%;
+				right: -320px;
+				overflow: hidden;
+			}
+			#gwis_s_modTW{top:35%;}
+			#gwis_s_modGP{right: -70px;top:45%;}
+			#gwis_s_modFB .gwis_s_mod_label, #gwis_s_modTW .gwis_s_mod_label, #gwis_s_modGP .gwis_s_mod_label{
+				width: 48px;
+				height: 48px;
+				float: left;
+				cursor: pointer;
+				padding: 0px;
+				background: url(http://icons.iconarchive.com/icons/simekonelove/modern-web/48/facebook-icon.png);
+			}
+			#gwis_s_modTW .gwis_s_mod_label{
+				background: url("http://icons.iconarchive.com/icons/simekonelove/modern-web/48/twitter-icon.png");
+			}
+			#gwis_s_modGP .gwis_s_mod_label{
+				background: url("http://icons.iconarchive.com/icons/simekonelove/modern-web/48/Google-plus-grey-icon.png");
+			}
+			
+			#gwis_s_modFB #gwis_s_mod_facebook{
+				background: #ffffff;
+				padding: 10px;
+				float: left;
+			}
+			#gwis_s_modTW #gwis_s_mod_twitter{
+				background: #00cdfc;
+				padding: 10px;
+				float: left;
+				width: 300px;
+				overflow: hidden;
+			}
+			#gwis_s_modGP #gwis_s_mod_googleplus{
+				background: #333230;
+				padding: 10px;
+				float: left;
+				width: 50px;
+				overflow: hidden;
+			}
+			.circle_point1,.circle_point2,.circle_point3,.circle_point4{
+				border-radius: 150px 150px 30px 150px;
+				width: 300px;
+				height: 300px;
+				display: block;
+				background: #e7ed50;
+				box-shadow: 5px 5px  15px #cccccc;
+				box-shadow: 0 0 0 10px #888888,0 0 0 20px #999999, 0 0 0 30px #aaaaaa;
+				float: left;
+				
+			}
+			.circle_point2{
+				border-radius: 150px 150px 150px 30px;
+			}
+			.circle_point3{
+				border-radius: 150px 30px 150px 150px;
+			}
+			.circle_point4{
+				border-radius: 30px 150px 150px 150px;
+			}
+			.circle_point3{clear: both;}
+			.square_fade_out_border{
+				width: 200px;
+				height: 200px;
+				display: block;
+				border: 10px solid #cccccc;
+				-moz-border-bottom-colors: #ffffff #cccccc #ffffff;
+				-moz-border-top-colors: #ffffff #cccccc #ffffff;
+				-moz-border-left-colors: #ffffff #cccccc #ffffff;
+				-moz-border-right-colors: #ffffff #cccccc #ffffff;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="circle_point1"></div>
+		<div class="circle_point2"></div>
+		<div class="circle_point3"></div>
+		<div class="circle_point4"></div>
+		<div class="square_fade_out_border"></div>
+		<div id="gwis_s_modFB">
+			<div class="gwis_s_mod_label"></div>
+			<div id="gwis_s_mod_facebook">
+				<iframe src="//www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fgan.web&amp;width=300&amp;colorscheme=light&amp;show_faces=true&amp;border_color&amp;stream=false&amp;header=false&amp;height=258&amp;appId=193979090675233" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:300px; height:258px;" allowTransparency="true"></iframe>
+			</div>
+		</div>
+		<div id="gwis_s_modTW">
+			<div class="gwis_s_mod_label"></div>
+			<div id="gwis_s_mod_twitter">
+				<script src="http://widgets.twimg.com/j/2/widget.js"></script>
+				<script>
+				new TWTR.Widget({
+				  version: 2,
+				  type: 'profile',
+				  rpp: 4,
+				  interval: 30000,
+				  width: 300,
+				  height: 250,
+				  theme: {
+				    shell: {
+				      background: '#61bdfa',
+				      color: '#404040'
+				    },
+				    tweets: {
+				      background: '#ffffff',
+				      color: '#1a0f1a',
+				      links: '#3386bd'
+				    }
+				  },
+				  features: {
+				    scrollbar: false,
+				    loop: true,
+				    live: true,
+				    hashtags: true,
+				    timestamp: true,
+				    avatars: false,
+				    behavior: 'default'
+				  }
+				}).render().setUser('gan_web').start();
+				</script>
+			</div>
+		</div>
+		<div id="gwis_s_modGP">
+			<div class="gwis_s_mod_label"></div>
+			<div id="gwis_s_mod_googleplus">
+				<!-- Place this tag in your head or just before your close body tag -->
+				<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+				<!-- Place this tag where you want the +1 button to render -->
+				<div class="g-plusone" data-size="tall"></div>
+			</div>
+		</div>
+	</body>
+</html>

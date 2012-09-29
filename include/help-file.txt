@@ -1,0 +1,36 @@
+// function of Database for converting the data
+function changeALL() {
+
+        /* query for Projects */
+        $q = "SELECT title,description,url from projects where url!=''";
+        $result = mysql_query($q, $this->connection);
+        while ($row = mysql_fetch_array($result)) {
+            $vals[] = $row;
+        }
+
+        /* Select fields with broken characters from original tasks table */
+        $q = "SELECT * from tasks";
+        $result = mysql_query($q, $this->connection);
+        while ($row = mysql_fetch_array($result)) {
+            $vals_tasks[] = $row;
+        }
+
+        mysql_set_charset('utf8');
+
+        /* Change Projects */
+        foreach ($vals as $key => $value) {
+            $q = "UPDATE projects SET title='$value[0]',description='$value[1]' where url='$value[2]'";
+            $result = mysql_query($q, $this->connection);
+        }
+
+        foreach ($vals_tasks as $key => $value) {
+            $q = "UPDATE tasks SET title='$value[title]',description='$value[description]' where id='$value[id]'";
+            $result = mysql_query($q, $this->connection);
+        }
+
+
+
+        /* ------THE END------- */
+    }
+    
+    fun

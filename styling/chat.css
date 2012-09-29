@@ -1,0 +1,149 @@
+#chat_active {
+    position: fixed;
+    right: 20px;
+    bottom: 0px;
+    display: block;
+    width:200px;
+    border: 2px solid #f0f0f0;
+    border-bottom: none;
+    color: #f0f0f0;
+    background: url("images/bg-header.png") repeat scroll red;
+}
+
+#chat_active.chat_on{
+    background: url("images/bg-header.png") repeat scroll transparent;
+}
+
+#chat_active a:link, #chat_active a:visited, #chat_active a {
+    color: #000000;
+}
+
+#chat_list {
+    background: #f0f0f0;
+    color: #000;
+    display: none;
+}
+
+#chat_list ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#chat_list ul li {
+  background: none repeat scroll 0 0 #F0F0F0;
+  border: 1px solid #C1C1C1;
+  line-height: 25px;
+  padding-left: 10px;
+}
+
+#chat_list_header {
+    height: 25px;
+    text-align: center;
+    padding: 5px 0;
+}
+
+#chat_list_header_title {
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.chatbox {
+	position: fixed;
+	position:expression("absolute");
+	width: 225px;
+	display:none;
+}
+
+.chatboxhead {
+	background-color: #000000;
+	padding:7px;
+	color: #ffffff;
+
+	border:1px solid #f0f0f0;
+	border-bottom: none;
+}
+
+
+
+.chatboxblink {
+	background-color: #D40000;
+	color: #f0f0f0;
+}
+
+.chatboxcontent {
+	font-family: arial,sans-serif;
+	font-size: 13px;
+	color: #333333;
+	height:200px;
+	width:209px;
+	overflow-y:auto;
+	overflow-x:auto;
+	padding:7px;
+	border-left:1px solid #cccccc;
+	border-right:1px solid #cccccc;
+	border-bottom:1px solid #eeeeee;
+	background-color: #f0f0f0;
+	line-height: 1.3em;
+}
+
+.chatboxinput {
+	padding: 5px;
+	background-color: #f0f0f0;
+	border-left:1px solid #cccccc;
+	border-right:1px solid #cccccc;
+	border-bottom:1px solid #cccccc;
+}
+
+.chatboxtextarea {
+	width: 206px;
+	height:44px;
+	padding:3px 0pt 3px 3px;
+	border: 1px solid #eeeeee;
+	margin: 1px;
+	overflow:hidden;
+}
+
+.chatboxtextareaselected {
+	border: 2px solid #D40000;
+	margin:0;
+}
+
+.chatboxmessage {
+	margin-left:1em;
+}
+
+.chatboxinfo {
+	margin-left:-1em;
+	color:#666666;
+
+}
+
+.chatboxmessagefrom {
+	margin-left:-1em;
+	font-weight: bold;
+}
+
+.chatboxmessagecontent {
+}
+
+.chatboxoptions {
+	float: right;
+}
+
+.chatboxoptions a {
+	text-decoration: none;
+	color: white;
+	font-weight:bold;
+	font-family:Verdana,Arial,"Bitstream Vera Sans",sans-serif;
+}
+
+.chatboxtitle {
+	float: left;
+}
+
+.chatboxtitle a:link, .chatboxtitle a:visited{
+    color: #f0f0f0;
+    text-decoration: none;
+}

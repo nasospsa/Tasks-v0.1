@@ -1,0 +1,56 @@
+
+
+#notes_container textarea {
+  background: none repeat scroll 0 0 transparent;
+  border: medium none;
+  height: 128px;
+  margin: 7px 12px;
+  resize: none;
+  width: 136px;
+  font-size: 14px;
+}
+
+.note_div {
+  background: url("images/note_bg.png") no-repeat scroll left top transparent;
+  color: #529214;
+  font-weight: bold;
+  height: 142px;
+  margin: 4px 0;
+  width: 160px;
+}
+
+#note_update{
+    display: none;
+    font-size: 18px;
+}
+
+#new_note_btn {
+  background: url("images/new_note.png") no-repeat scroll left top transparent;
+  border: medium none;
+  cursor: pointer;
+  font-weight: bold;
+  height: 38px;
+  padding-left: 34px;
+}
+
+.del_note{
+    display: block;
+    background: url("images/note_delete.png") no-repeat top left transparent;
+    width:14px;
+    height: 14px;
+    position: relative;
+    top: -147px;
+}
+
+.move_note {
+  background: url("images/drag.png") no-repeat scroll left top transparent;
+  bottom: 166px;
+  display: block;
+  height: 32px;
+  left: 140px;
+  position: relative;
+  width: 32px;
+  cursor: move;
+}
+
+
